@@ -1,0 +1,160 @@
+print
+single or double quotes but stay consistent
+input
+print() for a blank line, \n for a line break in-line
+print for debugging (like console.log)
+# for comments
+cmd+/ to comment/uncomment
+ctrl+l to clear terminal
+clear variables, underscores, lowercase first_name last_name
+text transform
+  sentence = 'The rabbit is named Pepper'
+  print(sentence.upper())
+  print(sentence.lower())
+  print(sentence.capitalize())
+  print(sentence.count('a'))
+can't print numbers and strings together
+numbers can be stored as strings
+numbers stored as strings are treated as strings
+input always returns strings
+int converts to integer (whole number)
+float converts to a floating number
+number values are used for math operations and to specify indivudal rows and lists and arrays
+to get date and time use datetime library
+  from datetime import datetime
+  current_date = datetime.now()
+  print('Today is ' + str(current_date))
+timedelta is used to define a period of time
+use date functions to control date formatting
+sometimes you receive the date as a string and need to convert it to a datetime object
+make sure to set up error handling for date data
+error handling is not debugging
+  syntax errors 
+    --code not going to run at all, 'good' errors, you 'want' these
+  runtime errors 
+    --code will fail when run (like division by 0), decent errors
+    --with a runtime error, the problem is somewhere with YOUR code
+  catching runtime errors (try/except/finally is not used to find bugs; you don't have to catch all errors -let it bubble up, someone else will deal with it, the app will crash (sometimes, this is exactly what you want to happen))
+    try:
+      print(x / y)
+    except ZeroDivisonError as e:
+      #optionally log e somewhere
+      print('Sorry, something went wrong')
+    except:
+      print('Something really went wrong')
+    finally:
+      print('This always run on success or failure')
+  logic errors 
+    --won't run at all, no error message, just doesn't do as expected (or anything)
+    Stack trace
+      last calls are on the top
+      your code is liekly on the bottom
+      seek out line numbers
+    Finding your mistake
+      reread your code
+      check the doc
+      search the integertake a break
+      ask someone for help
+**unit testing and test-driven development --research/learn about **
+be careful when comparing strings
+strong comparisons are case sensitive
+elif is great if only one of the conditions will ever be met
+if you have a list of possible values to check, you can use the IN operator
+UNIT TESTING
+Test every possible condition!
+Sometimes you can combine conditions with AND instead of nesting if statements
+If you need to remember the results of a condition check later in your code, use Boolean variables as flags (honour_roll = True then later if honour_roll:)
+lists are like arrays in JS; zero-indexed; store anything, store any type
+  movies = ['Scoob', 'Sonic', 'Alice In Wonderland']
+  actors = []
+  actors.append('Bruce Lee')
+  actors.append('Jada Pinkett')
+  print(movies)
+  print(actors)
+  print(actors[1])
+arrays need a library imported; not like JS (other than being zero-indexed);  number based, must all be the same type
+  from array import array
+  scores = array('d')
+  scores.append(97)
+  scores.append(98)
+  print(scores)
+  print(scores[1])
+common operations
+  names = ['Susuan', 'Christopher']
+  print(len(names)) # get the number of items
+  names.insert(0, 'Bill') #insert box before index
+  print(names)
+  names.sort() #smallest to largest or abc *modifies the list*
+  print(names)
+retrieving ranges
+  names = ['Susuan', 'Christopher', 'Bill', 'Justin']
+  presenters = names[1:3]
+  # start and end index
+  print(names)
+  print(presenters)
+dictionaries - key/value pairs, storage order not guaranteed
+  person = {'first': 'Christopher'}
+  person['last'] = 'Harrison'
+  print(person)
+  print(person['first'])
+lists - zero-based index, storege order guaranteed
+decision depends on whether or not you want to name things, and if you need a specific order
+cmd+d seek-multi-select
+loop
+  for name in ['Christopher', 'Susan']:
+    print(name)
+looping a number of times --use range
+  for index in range(0,2):
+    print(index)
+looping with a condition **This is not a typical example loop of a while loop (you want to use while in situations where something is going to change automatically. A list like this is almost always better to use a for list).
+  names = ['Christopher', 'Susan']  
+  index = 0
+  while index < len(names) :
+      print(names[index])
+      # Change the condition!!!
+      index = index + 1
+functions
+    use functions instead of repeating code
+        import datetime
+        def print_time():
+            print('task completed')
+            print(datetime.datetime.now())
+            print()
+        print_time()
+By moving the code to a function, you reduce rework and the chance of introducing bugs when you change the code you had copied
+    # Import the datetime class from datetime library
+    from datetime import datetime 
+    # Print the current time
+    def print_time():
+        print('task completed')
+        # Now I don't need the extra datetime prefix
+        print(datetime.now())
+        print()
+What if I want a different message displayed? Pass parameters for a lot more flexibility
+    def print_time(task_name):
+        print(task_name)
+    print_time('first name assigned')
+ex #2
+    def get_initial(name)
+        initial = name[0:1].upper()
+        return initial
+
+    first_name = input('Enter your first name ')
+    first_name_initial = get_initial(first_name)
+
+    last_name = input('Enter your last name ')
+    last_name_initial = get_initial(last_name)
+    print('Your initials are: ' + first_name_initial + last_name_initial)
+functions that return values allow clever code but you might trade readability for less code
+    def get_initial(name)
+        initial = name[0:1].upper()
+        return initial
+
+    first_name = input('Enter your first name ')
+    last_name = input('Enter your last name ')
+
+    print('Your initials are: ' + get_initial(first_name) + get_initial(last_name))
+functions can accept multiple parameters
+you can specify a default value for a parameter
+you can also assign the values to parameters by name when you call the function
+  positional notation, or name notation (when called ex name=first_name) that parameters can be used in any order
