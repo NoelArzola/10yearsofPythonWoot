@@ -1,5 +1,5 @@
 country = input('What country do you live in? ')
-tax = 0
+tax = 0.0
 
 # if province == 'Alberta':
 #     tax = 0.05
@@ -27,9 +27,9 @@ tax = 0
 #     tax = 0.15
 # print(tax)
 
-if country.lower == 'Canada':    
+if country.lower() == 'canada':    
     province = input('What province/state do you live in? ')
-    if province.lower in('Alberta', 'Nunavit', 'Yukon'):
+    if province.lower() in('alberta', 'nunavit', 'yukon'):
         tax = 0.05
     elif province.lower == 'Ontario':
         tax = 0.13
