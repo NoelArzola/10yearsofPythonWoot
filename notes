@@ -156,5 +156,23 @@ functions that return values allow clever code but you might trade readability f
     print('Your initials are: ' + get_initial(first_name) + get_initial(last_name))
 functions can accept multiple parameters
 you can specify a default value for a parameter
+  ex: def get_initial(name, force_uppercase=True):
+          if force_uppercase:
+            initial = name[0:1].upper()
+          else: initial = name[0:1]
+          return initial
+      first_name = input('Enter your first name: ')
+      first_name_initial = get_initial(first_name)
+
 you can also assign the values to parameters by name when you call the function
   positional notation, or name notation (when called ex name=first_name) that parameters can be used in any order
+
+  ex: def get_initial(name, force_uppercase=True):
+          if force_uppercase:
+            initial = name[0:1].upper()
+          else: initial = name[0:1]
+          return initial
+      first_name = input('Enter your first name: ')
+      first_name_initial = get_initial(forced_uppercase=False, name=first_name)
+
+      print('Your initial is: ' + first_name_initial)
