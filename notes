@@ -239,3 +239,18 @@ print(person_json)
 
 Use print statement to help you debug your code
 Use linting and have a print out of the full JSON so you can figure out the structure when reading specific elements
+
+Decorators =)
+Used most commonly to add additional functionality to your code
+
+Programming components:
+Objects > Nouns, Data constructs
+Functions/Methods > Vebrs, Actions
+Decorators > Adjectives, Add additional functionality to code, Common in frameworks (Django, Flask)
+
+``` python
+# Example decorator
+@log(True)
+def sample_function():
+    print('this is a sample function')
+```
