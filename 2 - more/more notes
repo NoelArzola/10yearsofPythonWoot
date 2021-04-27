@@ -1,0 +1,48 @@
+Formatting and linting
+
+Formatting
+- [PEP 8](https://pep8.org/) is a set of coding conventions for Python code
+- [Docstring](https://www.python.org/dev/peps/pep-0257/) is the standard for documenting a module, function, class or method definition
+
+Linting
+
+Linting helps you identify formatting and convention issues in your Python code
+
+- [Pylint](https://www.pylint.org/) Pylint is a linter for Python to help enforce coding standards and check for errors in Python code
+- [Linting Python in Visual Studio Code](https://code.visualstudio.com/docs/python/linting) will show you how to enable litners in VS Code
+- [Type hints](https://docs.python.org/3/library/typing.html) allow some interactive development environments and linters to enforce types
+
+Good code:
+def print_hello(name: str) -> str: *type hint*
+    """ Doc strings =)
+    Greets the user by name
+
+	Parameters:
+		name (str): The name of the user
+	Returns:
+		str: The greeting
+	""" end Doc strings =)
+	print('Hello, ' + name)
+
+Bad code:
+x = 12
+if x == 24:
+ print('Is valid')
+else:
+    print("Not valid")
+
+def helper(name='sample'):
+ pass
+
+def another(name = 'sample'):
+         pass
+
+(Woof. haha)
+
+Lambdas
+
+Sort - Can automatically handle primitve types and strings. If we need to do anything complex we need to tell sort how to sort. The key parameter allows you to pass in a function to call for each list element before it compares items for sorting.
+
+A [lambda](https://www.w3schools.com/python/python_lambda.asp) function is a small anonymous function. It can take any number of arguments but can only execute one expression.
+
+Check the demo ;-)
