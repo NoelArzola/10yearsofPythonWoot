@@ -46,3 +46,20 @@ Sort - Can automatically handle primitve types and strings. If we need to do any
 A [lambda](https://www.w3schools.com/python/python_lambda.asp) function is a small anonymous function. It can take any number of arguments but can only execute one expression.
 
 Check the demo ;-)
+
+Classes
+Classes define data structures and behavior
+Classes are the noun and properties are the adjectives. Methods would be the verbs.
+
+why use? Classes create reusable components and group data & operations together
+
+Creating a class (PascalCasing):
+class Presenter():
+    def __init__(self, name):
+		# Constructor
+		self.name = name
+		def say_hello(self)
+		# method
+		print('Hello, ' + self.name)
+
+The only difference between a Constructor and a normal function is when it gets called. Constructor is called when we look to create a brand new instance (of Presenter in this example).
