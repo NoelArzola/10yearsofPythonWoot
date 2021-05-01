@@ -63,3 +63,25 @@ class Presenter():
 		print('Hello, ' + self.name)
 
 The only difference between a Constructor and a normal function is when it gets called. Constructor is called when we look to create a brand new instance (of Presenter in this example).
+
+When we use a field think how everyone is going to be able to use and change it. EVERYTHING is public.
+Conventions for suggesting accessilibity:
+_ means avoid unless you really know what you're doing 
+__ means DO NOT USE
+
+Adding properties (control accessilibity better, limit what someone else can do to the class)
+
+Property gives field style access but uses methods behinds the scenes.
+
+class Presenter():
+      def __init__(self,name):
+			# Constructor
+			self.name = name
+
+			@property # getter x = presenter name
+			def name(self):
+			      return self.__name
+			@name.setter # presenter.name = 'Noel'
+			def name(self, value):
+			      # validation helper
+					  self.__name = value
