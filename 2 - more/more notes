@@ -85,3 +85,18 @@ class Presenter():
 			def name(self, value):
 			      # validation helper
 					  self.__name = value
+
+Inheritance
+allows you to define a class that inherits all the methods and properties from another class. The parent or base class is the class being inherited from. The child or derived class is the class that inherits from another class.
+
+*TO-DO*
+
+All methonds are "virtual" - can override or redefine their behavior
+Keyword super to access parent class
+  Constructor 
+	Properties in Methods
+Must always call parent constructor
+Using a derived class: *TO-DO*
+
+Overriding __str__
+*To-DO* 
