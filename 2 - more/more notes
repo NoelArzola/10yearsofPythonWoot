@@ -48,7 +48,7 @@ A [lambda](https://www.w3schools.com/python/python_lambda.asp) function is a sma
 Check the demo ;-)
 
 Classes
-Classes define data structures and behavior
+Classes define data structures and behavior, Classes allow you to group data and functionality together.
 Classes are the noun and properties are the adjectives. Methods would be the verbs.
 
 why use? Classes create reusable components and group data & operations together
@@ -100,3 +100,15 @@ Using a derived class: *TO-DO*
 
 Overriding __str__
 *To-DO* 
+
+Mixins (Multiple Inheritance)
+
+Python allows you to inherit from multiple classes. While the technical term for this is multiple inheritance, many developers refer to the use of more than one base class adding a mixin. These are commonly used in frameworks such as [Django](https://www.djangoproject.com).
+
+  Inherit from multiple Classes
+	A little controversial
+	--can get messy quickly
+	--many modern languages only support single Inheritance
+	Uses
+	--enable fuctionalality for frameworks such as Django
+	--streamline repititious operations
