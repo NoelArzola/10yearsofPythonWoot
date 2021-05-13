@@ -153,3 +153,41 @@ Get the file name: print(demo.file.name)
 Get the extension: print(demo_file.suffix)
 Get the folder: print(demo_file.parent.name)
 Get the size: print(demo_file.stat().st_size)
+
+Opening a file
+stream = open(file_name, mode, buffer_size)
+
+Modes:
+r - Read (default)
+w - Truncate and write
+a - Append if file exists
+x - Write, fail if file exists
++ - Updating (read/write)
+
+t - Text (default)
+b - Binary
+
+Reading from a file:
+stream = open('demo.txt')
+
+print(stream.readable()) --Can we read?
+print(steram.read(1)) --Read the first character
+print(stream.readline()) -- Read a line
+stream.close() --close the stream
+
+Writing to a file:
+stream = open('output.txt, 'wt') --write text
+stream.write('H') --write a single string
+stream.writelines(['ello', ' ', 'world' ]) --write multiple strings
+stream.write('\n') --write a new line
+names = ['Susan', 'Noel'] --create a list of strings
+stream.writelines(names) --write list of strings
+stream.close() -- close the stream (and flush the data)
+
+Managing the stream:
+stream = open('output.txt', 'wt')
+stream.write('demo!')
+stream.seek(0) --put the cursor back at the start
+stream.write('cool')
+stream.flush() write the data to file
+stream.close() flush and close the stream
