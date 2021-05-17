@@ -11,7 +11,7 @@ class Student(Person):
 	def sing_school_song(self):
 		print('Ode to ' + self.school)
 
-student = Student('Christopher', 'UVM')
+student = Student('Noel', 'Fredonia')
 student.say_hello()
 student.sing_school_song()
 # What are you?

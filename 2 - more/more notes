@@ -87,19 +87,58 @@ class Presenter():
 					  self.__name = value
 
 Inheritance
-allows you to define a class that inherits all the methods and properties from another class. The parent or base class is the class being inherited from. The child or derived class is the class that inherits from another class.
+Creates an "is a" relationship
+	Student is a person
+	SqlConnection is a DatabaseConnection
+	MySqlConnection is a DatabaseConnection
 
-*TO-DO*
+Composition (with properties) creates a "has a" relationship
+	Student has a Class
+	DatabaseConnection has a ConnectionString
+
+Allows you to define a class that inherits all the methods and properties from another class. The parent or base class is the class being inherited from. The child or derived class is the class that inherits from another class.
 
 All methonds are "virtual" - can override or redefine their behavior
 Keyword super to access parent class
   Constructor 
 	Properties in Methods
 Must always call parent constructor
-Using a derived class: *TO-DO*
+
+Inheriting from a class:
+class Person:
+    def __init__(self, name):
+		    self.name = name
+		def say_hello(self):
+		    print('Hello, ' + self.name)
+
+class Student(Person): #where we inherit (Student is a Person)
+    def __init__(self, name, school): # name comes from person
+		    super().__init__(name) # call parent connstructor
+				self.school = school
+		def sing_school_song(self):
+		    print('Ode to ' + self.school)
+
+Using a derived class:
+student = Student('Noel', 'Fredonia')
+student.say_hello()
+student.sing_school_song()
+# What are you?
+print(isinstance(student, Student))
+print(isinstance(student, Person))
+print(issubclass(Student, Person))
 
 Overriding __str__
-*To-DO* 
+Every single class you create automotically inherits from Object. Because of that we can always override that behavior.
+
+	class Person:
+			def __init__(self, name):
+					self.name = name
+			def say_hello(self):
+					print('Hello, ', + self.name)
+			def __str__(self):
+					return self.name
+	presenter = Presenter('Noel')
+	print(presenter)
 
 Mixins (Multiple Inheritance) *******
 
