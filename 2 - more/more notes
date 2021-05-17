@@ -140,6 +140,11 @@ Every single class you create automotically inherits from Object. Because of tha
 	presenter = Presenter('Noel')
 	print(presenter)
 
+	When we override a function it's not automatically going to call the base Parent or base Class, we have to tell it to do that.
+
+YAGNI - You aren't gonna need it
+*Don't add functionality to the code until you actually need it*
+
 Mixins (Multiple Inheritance) *******
 
 Python allows you to inherit from multiple classes. While the technical term for this is multiple inheritance, many developers refer to the use of more than one base class adding a mixin. These are commonly used in frameworks such as [Django](https://www.djangoproject.com).
