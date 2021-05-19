@@ -9,23 +9,27 @@ class Connection:
         self.server = ''
     def connect(self):
         print('Connecting to database on ' + self.server)
-
-class SqlDatabase(Connection, Loggable):
-    def __init__(self):
-        super().__init__()
-        self.title = 'Sql Connection Demo'
-        self.server = 'Some_Server'
         
-# Use the framework
-# Inherit from Connection and Loggable
 def framework(item):
     if isinstance(item, Connection):
         item.connect()
     if isinstance(item, Loggable):
         item.log()
 
+# Use the framework
+# Inherit from Connection and Loggable
+class SqlDatabase(Connection, Loggable):
+    def __init__(self):
+        super().__init__()
+        self.title = 'Sql Connection Demo'
+        self.server = 'Some_Server'
+
 # sql_connection = SqlDatabase()
+# framework(sql_connection)
 
-class JustLog(Loggable)
+class JustLog(Loggable):
+    def __init__(self):
+        self.title = "Loggin ain't easy"
 
-framework(sql_connection)
+just_log = JustLog()
+framework(just_log)
