@@ -254,3 +254,21 @@ Decorators > Adjectives, Add additional functionality to code, Common in framewo
 def sample_function():
     print('this is a sample function')
 ```
+
+Cleaning with with
+Writing to a file:
+  stream = open ('output.txt', 'wt')
+  stream.write('Bacon ipsum')
+  stream.close() # THIS IS REALLY IMPORTANT!!
+
+Re-writing with a try/finally
+try:
+  stream = open ('output.txt', 'wt')
+  stream.write('Bacon ipsum')
+finally:
+  stream.close() # THIS IS REALLY IMPORTANT!!
+
+Simplying with *with*
+with open('output.txt', 'wt') as stream:
+    stream.write('Bacon ipsum')
+# The same as the try and finally above =) 
