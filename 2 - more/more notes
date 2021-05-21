@@ -282,3 +282,21 @@ stream.seek(0) --put the cursor back at the start
 stream.write('cool')
 stream.flush() write the data to file
 stream.close() flush and close the stream
+
+Cleaning with with
+Writing to a file:
+  stream = open ('output.txt', 'wt')
+  stream.write('Bacon ipsum')
+  stream.close() # THIS IS REALLY IMPORTANT!!
+
+Re-writing with a try/finally
+try:
+  stream = open ('output.txt', 'wt')
+  stream.write('Bacon ipsum')
+finally:
+  stream.close() # THIS IS REALLY IMPORTANT!!
+
+Simplying with *with*
+with open('output.txt', 'wt') as stream:
+    stream.write('Bacon ipsum')
+# The same as the try and finally above =) 
