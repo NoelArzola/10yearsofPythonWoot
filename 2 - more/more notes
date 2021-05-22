@@ -300,3 +300,56 @@ Simplying with *with*
 with open('output.txt', 'wt') as stream:
     stream.write('Bacon ipsum')
 # The same as the try and finally above =) 
+
+Asynchronous operations =)
+The waiting is the hardest part (lol)
+
+Some operations take a LONG time:
+	Web calls
+	Network IO 
+	Complex data processing
+	We don't want to stop everything just because one process is taking forever
+
+Concurrency and parellelism is a broad topic
+All languages offer multiple options for manaiging long running operations - Python is no exception
+We're going to focus on a common scenario - web requests
+
+Introducing the asyncio module (New in Python 3.4)
+Undergoing regular updates
+"Grafts" asynchronous development into Python
+Streams
+async/await
+Synchronization (locks)
+Exception management
+
+await is going to logically pause our code. The next line of code is not going to execute until the line above is complete.
+Tells the code, we're going to be waiting on something.
+
+async task is like a promise
+
+Running our aiohttp demo
+	async def main():
+			start_time = default_timer()
+
+			async with aiohttp.ClientSession() as session:
+					two_task = asyncio.create_task(load_data(session, 2))
+					three_task = asyncio.create_task(load_data(session, 3))
+
+					print('Doing other work')
+
+					two_result = await two_task
+					three_result = await three_task
+
+					elapsed_time = default_timer() - start_time
+					print(f'The operation took {elapsed_time:.2} seconds')
+	
+Asynchronous using aiohttp
+# install aiohttp
+import aiohttp
+from timeit import default_timer
+
+async def load_data(session, delay):
+    async with session.get(f'https://httpbin.org/delay/{delay}') as resp:
+		    await resp.text()
+# continued
+result = await load_data(session, 4)
