@@ -32,3 +32,5 @@ async def main():
         print(f'The operation took {elapsed_time:.2} seconds')
 
 asyncio.run(main())
+
+# This will execute things asynchronously

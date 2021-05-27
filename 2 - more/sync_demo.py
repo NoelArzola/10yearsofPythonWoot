@@ -19,3 +19,5 @@ def main():
     run_demo()
 
 main()
+
+# This will stop and execute each thing
