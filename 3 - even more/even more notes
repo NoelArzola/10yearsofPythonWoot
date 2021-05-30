@@ -8,3 +8,53 @@ Jupyter Notebooks are an open source web application that allows you to create a
 - [Create and run a notebook](https://docs.microsoft.com/azure/notebooks/tutorial-create-run-jupyter-notebook?WT.mc_id=python-c9-niner) is a tutorial that walks you through the process of using Azure Notebooks to create a complete Jupyter Notebook that demonstrates linear regression
 - [How to create and clone projects](https://docs.microsoft.com/azure/notebooks/create-clone-jupyter-notebooks?WT.mc_id=python-c9-niner) to create a project
 - [Manage and configure projects in Azure Notebooks](https://docs.microsoft.com/azure/notebooks/configure-manage-azure-notebooks-projects?WT.mc_id=python-c9-niner) to upload Notebooks to your project
+
+# Anaconda
+
+Anaconda is an open source distribution of Python and R for data science
+Includes: 
+  more than 1500 packages
+  a graphical interface called Anaconda Navigator
+  a command line interface called Anaconda prompt
+  a tool called conda
+
+conda is a tool to create and manage python environments
+As you get into more advanced Python coding you will need to install different packages
+When working wth tools such a Jupyter notebooks, conda may be the simplest way to install libraries so they can be accessed from your notebooks
+
+After you install Anaconda launch the prompt
+
+Create a virtual environment with conda: conda create --name my_notebook_env python=3.7 -y
+  --name my_notebook_env = the name of the environment
+  python 3.7 = version of python in the environment
+  -y responds yes automatically to prompts
+
+Activate your virtual environment
+
+conda activate my_notebook_env
+
+conda deactivate 
+# will deactivate the current active environment
+
+conda remove --name my_notebook_env --all
+# will permanently delete the virtual environment
+
+Install library in the active environment
+
+conda install pandas
+
+Install jupyter
+conda install jupyter
+
+conda list
+# will return a list of installed libraries
+
+Launch notebook from the activate environment
+1. Activate your environment
+  conda activate my_notebook_env
+2. Launch Jupyter notebooks
+  jupyter notebook
+
+cmd/ctrl+c twice will shut down the kernel and bring back the prompt
+NOTE: You may need to deactivate and reactivate your environment before you launch Jupyter notebooks the first time after you install a new packages
+
