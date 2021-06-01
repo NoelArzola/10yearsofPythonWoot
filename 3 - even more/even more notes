@@ -58,3 +58,45 @@ Launch notebook from the activate environment
 cmd/ctrl+c twice will shut down the kernel and bring back the prompt
 NOTE: You may need to deactivate and reactivate your environment before you launch Jupyter notebooks the first time after you install a new packages
 
+# Pandas
+An open source/BSD-licensed library
+High performance and familiar data structures and data analysis tools
+https://pandas/pydata.org
+import pandas as pydata
+
+pandas Series is similar to Python list
+One dimensional array of objects
+Each row as an index
+By default, index is zero-based
+The difference is we can set the index to whatever we want!
+
+Create a new Series
+airports = pd.Series([
+            'Seattle-Tacoma', #0
+            'Dulles', #1
+            'London Heathrow' #2
+            'Schiphol' #3
+          ])
+airports[2] # 2 - 'London Heathrow'
+
+for value in airports:
+    print(value)
+
+DataFrame for two dimensional data structures
+Similar to a table in a database or spreadsheet
+Columns identified by name
+Rows of data
+Index column
+
+Create a DataFrame
+airports = pd.DataFrame([
+  ['Seattle-Tacoma', 'Seattle', 'USA'],
+  ['Dulles', 'Washington', 'USA']
+])
+
+columns parameter to specify column names
+airports = pd.DataFrame([
+  ['Seattle-Tacoma', 'Seattle', 'USA'],
+  ['Dulles', 'Washington', 'USA']],
+  columns=['Name', 'City', 'Country']
+  )
