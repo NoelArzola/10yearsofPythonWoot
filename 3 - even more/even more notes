@@ -100,3 +100,14 @@ airports = pd.DataFrame([
   ['Dulles', 'Washington', 'USA']],
   columns=['Name', 'City', 'Country']
   )
+
+Examining Pandas | DataFrame contents
+head - first n rows 
+  airports.head(3)
+tail - last n rows
+  airports.tails(3)
+shape - number of rows and columns
+  airports.shape
+  (7,3) - there is always an index so we get DATA columns and rows only
+info will return more detailed information
+  airports.info() # number of rows, index range, total columns, column names, numbre of non-null values, datatypes NOTE: strings are a database object 
